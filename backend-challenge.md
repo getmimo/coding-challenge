@@ -23,7 +23,7 @@ The server should expose only REST endpoints using JSON as the format.
 ### Users
 
 - There are multiple **users** accessing the REST endpoints (e.g., from the Mimo app)
-- You don't have to create an authentication system, just hardcore any user-specific actions to a single user
+- You don't have to create an authentication system, just hardcode any user-specific actions to a single user
 - Each user can solve multiple **lessons*
 - Each **lesson** can be solved multiple times
 - Track the time the **user** starts the **lessons** and the time the **user** completes the **lesson**
