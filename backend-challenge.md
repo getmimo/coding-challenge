@@ -24,7 +24,7 @@ The server should expose only REST endpoints using JSON as the format.
 
 - There are multiple **users** accessing the REST endpoints (e.g., from the Mimo app)
 - You don't have to create an authentication system, just hardcode any user-specific actions to a single user
-- Each user can solve multiple **lessons*
+- Each user can solve multiple **lessons**
 - Each **lesson** can be solved multiple times
 - Track the time the **user** starts the **lessons** and the time the **user** completes the **lesson**
 
@@ -51,7 +51,7 @@ The server should expose only REST endpoints using JSON as the format.
 
 Create an endpoint where the Mimo app can send information about lessons that the user completed to.
 The app will send the following data:
-- Which lessons was completed
+- Which lesson was completed
 - When was the lesson started
 - When was the lesson completed
 
