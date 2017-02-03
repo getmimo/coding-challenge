@@ -5,7 +5,7 @@ Your objective is to create a basic version of the Mimo server functionality.
 The point of this exercise is not to create a fully-functional bug-free server implementation,
 but rather to look how you would design such a server system and how you approach different problems.
 
-Write the server with ASP.NET, backed by Entity Framework Core with SQLite as database 
+Write the server with ASP.NET Core, backed by Entity Framework Core with SQLite as database 
 (so we don't have to setup a full blown database).
 
 The server should expose only REST endpoints using JSON as the format.
