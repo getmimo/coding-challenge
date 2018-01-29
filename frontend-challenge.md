@@ -1,6 +1,6 @@
 ## Overview
 
-Create an Angular 2 website written in Typescript that lets users create a new Mimo account or lets user login with their existing Mimo account.
+Create an [angular](https://angular.io/) website written in Typescript that lets users create a new Mimo account or lets user login with their existing Mimo account.
 
 - You won't be judged on the visual design at all, the only metric is your code.
 - Part of this coding challenge is to read the documentation for the APIs provided to you.
