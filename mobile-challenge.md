@@ -1,5 +1,3 @@
-## Overview
-
 # Mimo Mobile Coding Challenge
 
 The goal of this challenge is to create an extremely simplified version of the Mimo app that can retrieve some very basic lessons from a server and display them.
