@@ -30,7 +30,7 @@ Every lesson contains content, formatted as JSON, that represents an array of co
 
 ```json
 {
-  "id": 5
+  "id": 5,
   "content": [{
       "type": "text",
       "color: "#FFFFFF",
