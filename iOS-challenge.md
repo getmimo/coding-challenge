@@ -1,5 +1,32 @@
 ## Overview
 
+The goal of this challenge is to create an extremely simplified version of the Mimo app that can retrieve some very basic lessons from a server and display them.
+
+- You won't be judged on the visual design at all, the only metric is your code.
+- Part of this coding challenge is to read the documentation for the APIs provided to you.
+- Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
+
+## Data structure
+
+### Lessons
+
+- Each lesson has an ID and JSON content that describes how the lesson is formatted
+- Lessons come in a specific order
+
+### Lesson progress
+
+A lesson progress object is created when a lesson has been completed
+It contains the following properties:
+- The ID of the lesson
+- A timestamp when the lesson started
+- A timestamp when the lesson completed
+
+## API
+
+
+
+
+
 Create a simple iOS app written in Swift that lets users create a new Mimo account or lets user login with their existing Mimo account.
 
 - You won't be judged on the visual design at all, the only metric is your code.
