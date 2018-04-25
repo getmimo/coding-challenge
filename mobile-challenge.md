@@ -32,17 +32,14 @@ Every lesson contains content, formatted as JSON, that represents an array of co
 {
   "id": 5,
   "content": [{
-      "type": "text",
       "color": "#FFFFFF",
       "text": "Hello "
   },
   {
-      "type": "input",
       "color": "#FFFFFF",
       "text": "World"
   },
   {
-      "type": "text",
       "color": "#FFFFFF",
       "text": "!"
   }],
@@ -52,6 +49,12 @@ Every lesson contains content, formatted as JSON, that represents an array of co
   }
 }
 ```
+
+Each object in the content array represents a text snippet that each can have a different color. If the `input` object exists, it represents the range where the user has to type in the expected input. In this example the user has to input "World" in order to proceed to the next lesson.
+
+Here's an example of how this lesson could look like:
+
+<img width="217" alt="challengedisplay" src="https://user-images.githubusercontent.com/964691/39253366-fe542ad0-48a7-11e8-98c4-8e1c2c6a470d.PNG">
 
 ### Lesson completion event
 
