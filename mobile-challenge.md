@@ -35,13 +35,18 @@ Every lesson contains content, formatted as JSON, that represents an array of co
       "type": "text",
       "color": "#FFFFFF",
       "format": "bold",
-      "text": "Hello"
+      "text": "Hello "
+  },
+  {
+      "type": "input",
+      "color": "#FFFFFF",
+      "expected": "World"
   },
   {
       "type": "text",
       "color": "#FFFFFF",
       "format": "italic",
-      "text": "World"
+      "text": "!"
   }]
 }
 ```
