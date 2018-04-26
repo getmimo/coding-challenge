@@ -65,8 +65,8 @@ It contains the following properties:
 - A timestamp when the lesson started
 - A timestamp when the lesson completed
 
-## API
+## Server API
 
-
+The server API for getting the lessons is extremely simple. Just do a GET request on https://mimochallenge.azurewebsites.net/api/lessons, which returns a JSON object that contains all of the lesson information.
 
 
