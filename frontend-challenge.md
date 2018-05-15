@@ -72,6 +72,6 @@ It contains the following properties:
 
 ## Server API
 
-The server API for getting the lessons is extremely simple. Just do a GET request on https://mimochallenge.azurewebsites.net/api/lessons, which returns a JSON object that contains all of the lesson information.
+The server API for getting the lessons is extremely simple. Just do a GET request on https://file-bzxjxfhcyh.now.sh/, which returns a JSON object that contains all of the lesson information.
 
 
