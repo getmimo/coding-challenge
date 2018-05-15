@@ -54,7 +54,8 @@ Each object in the content array represents a text snippet that each can have a 
 
 Here's an example of how this lesson could look like:
 
-<img width="217" alt="challengedisplay" src="https://www.dropbox.com/s/slgj9l9nzs17s4i/Screenshot%202018-05-15%2007.44.38.png?dl=0">
+<img width="894" alt="screenshot 2018-05-15 07 44 38" src="https://user-images.githubusercontent.com/815520/40041124-3db40568-581d-11e8-8327-f939fea207d9.png">
+
 
 ### Lesson completion event
 
