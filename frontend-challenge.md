@@ -1,38 +1,72 @@
-## Overview
+# Mimo Frontend Coding Challenge
 
-Create an [angular](https://angular.io/) website written in Typescript that lets users create a new Mimo account or lets user login with their existing Mimo account.
+The goal of this challenge is to create an extremely simplified version of the Mimo app that can retrieve some very basic lessons from a server and display them.
 
+## Implementation
+
+- While you can write the challenge any way you want, we use Reactive Extensions for a good amount of parts in our apps at Mimo, so it would make sense to use RxJS if suitable.
 - You won't be judged on the visual design at all, the only metric is your code.
 - Part of this coding challenge is to read the documentation for the APIs provided to you.
 - Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
 
-All of the authentication is done via [Auth0](https://auth0.com/)
+## Goal
 
-- Auth0 Domain: `mimo-test.auth0.com`
-- Auth0 Client ID: `PAn11swGbMAVXVDbSCpnITx5Utsxz1co`
-- Auth0 Connection Name: `Username-Password-Authentication`
+Write a small app that can display a few very simple Mimo lessons. You get the information for the lessons from an API and should display the first lesson. The lessons have a specific format (documented later) and should be rendered to the screen. If the lesson contains an interaction, display the interaction. Also display a "Next" button that, when pressed, checks that the lesson has been solved and continues to the next lesson.
 
-The website should have three pages: One for login (/login), one for signup (/signup) and one to display information about the logged in user (/account).
+When a lesson has been solved, store this event in a database of your choice in the browser (see "Lesson completion event").
 
-## Login (/login)
+If the user solved the last lesson, display a simple screen that says "Done".
 
-	- The page should contain two fields: One for the email address and one for the password.
-	- If the email doesn't exist upon login, display an error message stating that the account doesn't exist
-	- Link to the signup page, so users that don't have an account yet can signup first
+## Data structure
 
-Relevant Auth0 API: https://auth0.com/docs/api/authentication#resource-owner-password
+### Lessons
 
-## Signup (/signup)
+- Each lesson has an ID and JSON content that describes how the lesson is formatted
+- Lessons come in a specific order
 
-	- The page should contain two fields: One for the email address and one for the password.
-	- If the email exist upon signup, display an error message stating that the account already exists
+#### Lesson Content Format
 
-Relevant Auth0 API: https://auth0.com/docs/api/authentication#signup
-Use `openid profile email` for the `scope` parameter
+Every lesson contains content, formatted as JSON, that represents an array of content objects:
 
-## Account (/account)
+```json
+{
+  "id": 5,
+  "content": [{
+      "color": "#FFFFFF",
+      "text": "Hello "
+  },
+  {
+      "color": "#FFFFFF",
+      "text": "World"
+  },
+  {
+      "color": "#FFFFFF",
+      "text": "!"
+  }],
+  "input": {
+    "startIndex": 7,
+    "endIndex": 11
+  }
+}
+```
 
-	- The page should display the email address of the user. Get this info from the JWT that you receive
-	- If you're brave enough, also display the Gravatar picture associated with the email address
-	- If the user user navigates to the account page directly and they aren't logged in, redirect them to the login page. Implement this in a way so it can be easily extended to other pages.
-	- If the JWT expires, do the same as the above point.
+Each object in the content array represents a text snippet that each can have a different color. If the `input` object exists, it represents the range where the user has to type in the expected input. In this example the user has to input "World" in order to proceed to the next lesson. If an input interaction exists, and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button, so the user can proceed to the next lesson. If there is no input interaction, the button should always be enabled.
+
+Here's an example of how this lesson could look like:
+
+<img width="217" alt="challengedisplay" src="https://www.dropbox.com/s/slgj9l9nzs17s4i/Screenshot%202018-05-15%2007.44.38.png?dl=0">
+
+### Lesson completion event
+
+A lesson completion event object is created when a lesson has been completed
+
+It contains the following properties:
+- The ID of the lesson
+- A timestamp when the lesson started
+- A timestamp when the lesson completed
+
+## Server API
+
+The server API for getting the lessons is extremely simple. Just do a GET request on https://mimochallenge.azurewebsites.net/api/lessons, which returns a JSON object that contains all of the lesson information.
+
+
