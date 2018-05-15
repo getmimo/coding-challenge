@@ -36,11 +36,15 @@ Every lesson contains content, formatted as JSON, that represents an array of co
       "text": "print"
   },
   {
-      "color": "#FFFFdd",
-      "text": "(\"Hello world!"
+      "color": "#FFFFDD",
+      "text": "(\""
   },
   {
       "color": "#FFFFFF",
+      "text": "(Hello world!"
+  },
+  {
+      "color": "#FFFFDD",
       "text": "\")"
   }],
   "input": {
