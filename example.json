@@ -1,0 +1,47 @@
+{
+    "lessons": [
+    {
+        "id": 5,
+        "content": [
+        {
+            "color": "#FFFFFF",
+            "text": "Hello World!"
+        }]
+    },
+    {
+        "id": 6,
+        "content": [
+        {
+            "color": "#FF0000",
+            "text": "var "
+        },
+        {
+            "color": "#FFFFFF",
+            "text": "x = "
+        },
+        {
+            "color": "#0000FF",
+            "text": "1"
+        }]
+    },
+    {
+        "id": 7,
+        "content": [
+        {
+            "color": "#FF0000",
+            "text": "var "
+        },
+        {
+            "color": "#FFFFFF",
+            "text": "number = "
+        },
+        {
+            "color": "#0000FF",
+            "text": "1"
+        }],
+        "input": {
+            "startIndex": 4,
+            "endIndex": 10
+        }
+    }]
+}
