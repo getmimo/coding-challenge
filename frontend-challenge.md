@@ -33,26 +33,26 @@ Every lesson contains content, formatted as JSON, that represents an array of co
   "id": 5,
   "content": [{
       "color": "#FFFFFF",
-      "text": "Hello "
+      "text": "print"
+  },
+  {
+      "color": "#FFFFdd",
+      "text": "(\"Hello world!"
   },
   {
       "color": "#FFFFFF",
-      "text": "World"
-  },
-  {
-      "color": "#FFFFFF",
-      "text": "!"
+      "text": "\")"
   }],
   "input": {
-    "startIndex": 7,
-    "endIndex": 11
+    "startIndex": 0,
+    "endIndex": 5
   }
 }
 ```
 
 Each object in the content array represents a text snippet that each can have a different color. If the `input` object exists, it represents the range where the user has to type in the expected input. In this example the user has to input "World" in order to proceed to the next lesson. If an input interaction exists, and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button, so the user can proceed to the next lesson. If there is no input interaction, the button should always be enabled.
 
-Here's an example of how this lesson could look like:
+Here's an example of how one lesson could look like:
 
 <img width="894" alt="screenshot 2018-05-15 07 44 38" src="https://user-images.githubusercontent.com/815520/40041124-3db40568-581d-11e8-8327-f939fea207d9.png">
 
