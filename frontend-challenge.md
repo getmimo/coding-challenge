@@ -4,7 +4,7 @@ The goal of this challenge is to create an extremely simplified version of the M
 
 ## Implementation
 
-- While you can write the challenge any way you want, we use Reactive Extensions for a good amount of parts in our apps at Mimo, so it would make sense to use RxJS if suitable.
+- While you can write the challenge any way you want, we use Reactive Extensions quite extensively in our apps at Mimo, so it would make sense to use RxJS if suitable.
 - You won't be judged on the visual design at all, the only metric is your code.
 - Part of this coding challenge is to read the documentation for the APIs provided to you.
 - Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
