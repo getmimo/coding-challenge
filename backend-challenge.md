@@ -63,4 +63,3 @@ The app needs the following data:
 - If the achievement is completed or not
 - What the progress of the achievement is (e.g. if the user solved three lessons, 
   it should return "3" for the lesson completion achievements)
-Add Comment C
