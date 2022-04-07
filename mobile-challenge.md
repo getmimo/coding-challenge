@@ -1,12 +1,18 @@
-# Mimo Mobile Coding Challenge
+# Mimo Take-home Assignment (Mobile)
 
-The goal of this challenge is to create an extremely simplified version of the Mimo app that can retrieve some very basic lessons from a server and display them.
+## Welcome!
+
+To give you an idea of how some of the work as mobile engineering team member will look and help us get an impression of how you might approach these tasks, we've put together a take-home assignment. We’re doing this asynchronously because we know that, despite our best efforts to create a laid-back atmosphere, live coding interviews can be stressful and results may not be representative of your work. We believe going through the assignment at your own pace is a more natural way to achieve this goal. We know that completing the assignment will require some time investment and we really appreciate you taking this time. We believe this is a win-win situation and we wouldn't ask you if we didn't already think you're a great fit for the role.
+
+The objective of this take-home assignment is to create a simplified version of the Mimo app that can retrieve a simplified version of our coding lessons from a server and display them.
+
+Fingers crossed!
 
 ## Implementation
 
-- While you can write the challenge any way you want, we use Reactive Extensions + MVVM to build our apps at Mimo, so if you know those technologies, it would make sense to apply them in this challenge
-- You won't be judged on the visual design at all, the only metric is your code.
-- Part of this coding challenge is to read the documentation for the APIs provided to you.
+- While you can write the challenge any way you want, we use Reactive Extensions + MVVM to build our apps at Mimo, so if you know those technologies, it would make sense to apply them in this challenge.
+- We'll only evaluate your submission based on your code - there's no need to worry about the visual design
+- Part of this coding challenge is to read the documentation for the APIs we provide.
 - Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
 
 ## Goal
@@ -15,7 +21,7 @@ Write a small app that can display a few very simple Mimo lessons. You get the i
 
 When a lesson has been solved, store this event in a mobile database of your choice on the device (see "Lesson completion event").
 
-If the user solved the last lesson, display a simple screen that says "Done".
+When the last lesson has been solved, display a simple screen that says "Done".
 
 ## Data structure
 
@@ -50,7 +56,7 @@ Every lesson contains content, formatted as JSON, that represents an array of co
 }
 ```
 
-Each object in the content array represents a text snippet that each can have a different color. If the `input` object exists, it represents the range where the user has to type in the expected input. In this example the user has to input "World" in order to proceed to the next lesson. If an input interaction exists, and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button, so the user can proceed to the next lesson. If there is no input interaction, the button should always be enabled.
+Each object in the content array represents a text snippet, each of which can have a different color. If the `input` object exists, it represents the range where the user has to type in the expected input. In this example, the user has to input "World" in order to proceed to the next lesson. If an input interaction exists, and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button so the user can proceed to the next lesson. If there's no input interaction, the button should always be enabled.
 
 Here's an example of how this lesson could look like:
 
@@ -58,15 +64,14 @@ Here's an example of how this lesson could look like:
 
 ### Lesson completion event
 
-A lesson completion event object is created when a lesson has been completed
+A lesson completion event object is created when a lesson has been completed.
 
 It contains the following properties:
 - The ID of the lesson
-- A timestamp when the lesson started
-- A timestamp when the lesson completed
+- A timestamp when the lesson was started
+- A timestamp when the lesson was completed
 
 ## Server API
 
-The server API for getting the lessons is extremely simple. Just do a GET request on https://mimochallenge.azurewebsites.net/api/lessons, which returns a JSON object that contains all of the lesson information.
-
+The server API for getting the lessons is simple: just send a GET request to https://mimochallenge.azurewebsites.net/api/lessons and you'll receive a JSON object that contains all the lesson information.
 
