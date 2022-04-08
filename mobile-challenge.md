@@ -10,18 +10,18 @@ Fingers crossed!
 
 ## Implementation
 
-- While you can write the challenge any way you want, we use Reactive Extensions + MVVM to build our apps at Mimo, so if you know those technologies, it would make sense to apply them in this challenge.
-- We'll only evaluate your submission based on your code - there's no need to worry about the visual design
-- Part of this coding challenge is to read the documentation for the APIs we provide.
+- You can write the challenge any way you want. (At Mimo, we use Reactive Extensions and MVVM to build our apps. If you know those technologies, it makes sense for you to use them for this assignment.)
+- We'll only evaluate your submission based on your code - there's no need to worry about the visual design.
+- Part of this assignment is to work with the APIs we provide.
 - Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
 
 ## Goal
 
-Write a small app that can display a few very simple Mimo lessons. You get the information for the lessons from an API and should display the first lesson. The lessons have a specific format (documented later) and should be rendered to the screen. If the lesson contains an interaction, display the interaction. Also display a "Next" button that, when pressed, checks that the lesson has been solved and continues to the next lesson.
+Your goal is to write a small app with three simplified Mimo lessons (in the apps, we call these lessons "exercises"). You can get the information for the lessons from the API we provide. The lessons have a specific format (documented below) that defines how they need to be rendered. If a lesson contains an interaction, display the interaction. At app startup, display the first lesson. Also display a "Next" button that, when pressed, checks that the lesson has been solved and continues to the next lesson.
 
-When a lesson has been solved, store this event in a mobile database of your choice on the device (see "Lesson completion event").
+When a lesson is solved, store this event in a mobile database of your choice on the device (see "Lesson completion event").
 
-When the last lesson has been solved, display a simple screen that says "Done".
+When the last lesson is solved, display a simple screen that says "Done".
 
 ## Data structure
 
@@ -56,9 +56,9 @@ Every lesson contains content, formatted as JSON, that represents an array of co
 }
 ```
 
-Each object in the content array represents a text snippet, each of which can have a different color. If the `input` object exists, it represents the range where the user has to type in the expected input. In this example, the user has to input "World" in order to proceed to the next lesson. If an input interaction exists, and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button so the user can proceed to the next lesson. If there's no input interaction, the button should always be enabled.
+Each object in the content array represents a text snippet, each of which can have a different color. If the `input` object exists, it represents the range where the user needs to type in the expected input. In this example, the user has to input "World" in order to proceed to the next lesson. If there's an input interaction in the lesson and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button to allow the user to go on to the next lesson. If there's no input interaction, keep the button enabled.
 
-Here's an example of how this lesson could look like:
+Here's an example of how such a lesson might look:
 
 <img width="217" alt="challengedisplay" src="https://user-images.githubusercontent.com/964691/39253366-fe542ad0-48a7-11e8-98c4-8e1c2c6a470d.PNG">
 
@@ -73,5 +73,5 @@ It contains the following properties:
 
 ## Server API
 
-The server API for getting the lessons is simple: just send a GET request to https://mimochallenge.azurewebsites.net/api/lessons and you'll receive a JSON object that contains all the lesson information.
+To get the lessons from the server API is simple: just send a GET request to https://mimochallenge.azurewebsites.net/api/lessons and you'll receive a JSON object that contains all the lesson information.
 
