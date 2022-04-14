@@ -13,7 +13,7 @@ Fingers crossed!
 - You can write the challenge any way you want. (At Mimo, we use Reactive Extensions and MVVM to build our apps. If you know those technologies, it makes sense for you to use them for this assignment.)
 - We'll only evaluate your submission based on your code - there's no need to worry about the visual design.
 - Part of this assignment is to work with the APIs we provide.
-- Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
+- Use Git to track your changes and upload your Git repo on Github, and once you are done please share your private Repository with us via apply@mimo.recruitee.com
 
 ## Goal
 

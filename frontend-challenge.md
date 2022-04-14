@@ -8,7 +8,7 @@ The goal of this challenge is to create an extremely simplified version of the M
 - Try to think about how you manage your state and how you structure it.
 - You won't be judged on the visual design at all, the only metric is your code.
 - Part of this coding challenge is to read the documentation for the APIs provided to you.
-- Use Git to track your changes and upload your Git repo either on [GitHub](https://github.com) or [Bitbucket](https://bitbucket.com) to share it with us.
+- Use Git to track your changes and upload your Git repo on Github, and once you are done please share your private Repository with us via apply@mimo.recruitee.com
 
 ## Goal
 
