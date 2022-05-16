@@ -57,7 +57,7 @@ Every lesson contains content, formatted as JSON, that represents an array of co
 }
 ```
 
-Each object in the content array represents a text snippet that can have color. If the `input` object exists, it represents the range where the user has to type in the expected input. In place of that range there should be an input field instead of the text. In this example the user has to input "print" in order to proceed to the next lesson. If an input interaction exists, and the user hasn't typed in the correct input yet, disable the button. As soon as the input is the correct text, enable the button, so the user can proceed to the next lesson. If there is no input interaction, the button should always be enabled.
+Each object in the content array represents a text snippet, each of which can have a different color. If the `input` object exists, it represents the range where the user needs to type in the expected input. In this example, the user has to input "World" in order to proceed to the next lesson. If there's an input interaction in the lesson and the user hasn't typed in the input field yet, disable the button. As soon as the user has typed anything, enable the button to allow the user to check for the correct answer and go on to the next lesson or display a message if it is incorrect. If there's no input interaction, keep the button enabled.
 
 Here's an example of how the lesson above could look like:
 
