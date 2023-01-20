@@ -1,4 +1,4 @@
-# Mimo Take-home Assignment (Mobile)
+# Mimo Take-home Assignment (Frontend)
 
 ## Welcome!
 
