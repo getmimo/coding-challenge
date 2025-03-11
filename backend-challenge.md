@@ -5,10 +5,17 @@ Your objective is to create a basic version of the Mimo server functionality.
 The point of this exercise is not to create a fully-functional bug-free server implementation,
 but rather to look how you would design such a server system and how you approach different problems.
 
-Write the server with ASP.NET Core, backed by Entity Framework Core with SQLite as database 
-(so we don't have to setup a full blown database).
+## Tech Stack
 
-The server should expose only REST endpoints using JSON as the format.
+You have the choice of using two different tech stacks for the challenge, depending on what you're more comfortable with.
+
+### Typescript
+
+Write the server in Typescript using Express on Node, backed by an ORM or Query builder of your choice (e.g Drizzle) with SQLite as database.
+
+### C#
+
+Write the server in C#, using ASP.NET Core backed by Entity Framework Core with SQLite as database.
 
 ## Data structure
 
@@ -46,6 +53,8 @@ The server should expose only REST endpoints using JSON as the format.
 - Complete the C# course
 
 ## API
+
+Expose the endpoints using JSON as input and output format.
 
 ### Lesson progress
 
