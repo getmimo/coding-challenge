@@ -7,15 +7,7 @@ but rather to look how you would design such a server system and how you approac
 
 ## Tech Stack
 
-You have the choice of using two different tech stacks for the challenge, depending on what you're more comfortable with.
-
-### Typescript
-
-Write the server in Typescript using Express on Node, backed by an ORM or Query builder of your choice (e.g Drizzle) with SQLite as database.
-
-### C#
-
-Write the server in C#, using ASP.NET Core backed by Entity Framework Core with SQLite as database.
+Write the server in Typescript using Express on Node, backed by an ORM or Query builder of your choice (e.g Drizzle) with SQLite as database, and add some tests for your implementation.
 
 ## Data structure
 
