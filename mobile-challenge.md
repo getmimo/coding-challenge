@@ -10,10 +10,15 @@ Fingers crossed!
 
 ## Implementation
 
-- You can write the challenge any way you want. (At Mimo, we use Kotlin Coroutines/Flow and MVVM or MVI to build our apps. If you know those technologies, it makes sense for you to use them for this assignment.)
-- We will only evaluate your submission based on your code - there is no need to worry about the visual design.
+- You can write the challenge any way you want.
 - Part of this assignment is to work with the APIs we provide.
 - Use Git to track your changes and upload your Git repo on Github, and once you are done please share your private Repository with us via apply@mimo.recruitee.com
+
+## What we Value
+
+- We value clearly structured state and data
+- We value easy to read and simple code
+- We value great UX
 
 ## Goal
 
