@@ -55,7 +55,7 @@ Every lesson contains content, formatted as JSON, that represents an array of co
       "text": "!"
   }],
   "input": {
-    "startIndex": 7,
+    "startIndex": 6,
     "endIndex": 11
   }
 }
