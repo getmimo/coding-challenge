@@ -2,84 +2,61 @@
 
 ## Welcome!
 
-To give you an idea of how some of the work as mobile engineering team member will look and help us get an impression of how you might approach these tasks, we've put together a take-home assignment. We’re doing this asynchronously because we know that, despite our best efforts to create a laid-back atmosphere, live coding interviews can be stressful and results may not be representative of your work. We believe going through the assignment at your own pace is a more natural way to achieve this goal. We know that completing the assignment will require some time investment and we really appreciate you taking this time. We believe this is a win-win situation and we wouldn't ask you if we didn't already think you're a great fit for the role.
+To give you an idea of how some of the work as a frontend engineering team member will look and help us get an impression of how you might approach these tasks, we've put together a take-home assignment. We're doing this asynchronously because we know that, despite our best efforts to create a laid-back atmosphere, live coding interviews can be stressful and results may not be representative of your work. We believe going through the assignment at your own pace is a more natural way to achieve this goal. We know that completing the assignment will require some time investment and we really appreciate you taking this time. We believe this is a win-win situation and we wouldn't ask you if we didn't already think you're a great fit for the role.
 
-The objective of this take-home assignment is to create a simplified version of the Mimo app that can retrieve a simplified version of our coding lessons from a server and display them.
+The objective of this take-home assignment is to create a simplified version of the Mimo app that can retrieve coding lessons from a server and display them.
+
+**This is an open-ended challenge.** There is no single "right" answer. We care more about your decisions, reasoning, and how you approach problems than about matching a specification exactly. Feel free to change, improve, or reimagine any part of this challenge.
 
 Fingers crossed!
 
-## Implementation
+## Important
 
-- You can solve the challenge in any way and framework you feel comfortable with (angular / react / vue / elm / ...).
+- **User Experience (UX):** How does the app feel to use? Think beyond the happy path and design an experience that feels intuitive and easy to follow for new learners.
+- **The learning content** Invest time into the learning content. Your job is to create a great experience for the user.
+- **Code Structure and Architecture:** How do you manage state? How is your code organized? We look for clean separation of concerns, maintainability, and thoughtful architectural decisions.
+- **LLM Collaboration:** You must use [**OpenCode**](https://opencode.ai/) while working on this challenge. You don't need to use it exclusively but we want to see how you work with AI — please [share](https://opencode.ai/docs/share/) your OpenCode session link (or multiple) with your submission. We are interested in your prompts, iterations, and how you leverage LLMs in your workflow.
+- **openrouter api key:** We will provide an openrouter api key which you can use with opencode.
+- **Don't invest more than 8h:** The scope is ambitions, so focus on the topics that feel most important to you. If you need to make trade-offs or cut scope, that is absolutely fine! Use the readme to share your thinking and what you would work on next. We do want to protect your time.
+
+## What We Value
+
+- Solve the challenge by using react
 - Try to think about how you manage your state and how you structure it.
-- You won't be judged on the visual design, the only metric is your code.
+- The main metrics for judgment are your LLM usage, your code and UX.
 - While the visual aspect is not important, think about a nice user flow and experience.
-- Part of this coding challenge is to read the documentation for the APIs provided to you.
-- Use Git to track your changes and upload your Git repo on Github, and once you are done please share your private Repository with us via apply@mimo.recruitee.com
+- Part of this coding challenge is to design your own API and lesson format.
+- Use Git to track your changes and upload your Git repo on GitHub. Once you are done, please share your private repository with us via apply@mimo.recruitee.com.
 
 ## Goal
 
-Your goal is to write a small app with three simplified Mimo lessons (in the apps, we call these lessons "exercises"). You can get the information for the lessons from the API we provide. The lessons have a specific format (documented below) that defines how they need to be rendered. If a lesson contains an interaction, display the interaction. The initial page displays the first lesson. Also display a "Next" button that, when pressed, checks that the lesson has been solved and continues to the next lesson.
+Your goal is to write a small web app that teaches a user **how to add a button to a homepage** through a series of interactive lessons. Assume your users are full beginners and understand nearly nothing about coding. You decide how many lessons to include (we suggest 3–5) and how to structure them.
 
-When a lesson has been solved, store this event in a database of your choice in the browser (see "Lesson completion event").
+Each lesson must be loaded individually from an API endpoint that **you build yourself**. The initial page should display the first lesson.
 
-If the user solved the last lesson, display a simple screen that says "Done".
+If the user solved the last lesson, display a done screen
 
-## Data structure
+## Data Structure
 
-### Lessons
-
-- Each lesson has an ID and JSON content that describes how the lesson is formatted
-- Lessons come in a specific order
-
-#### Lesson Content Format
-
-Every lesson contains content, formatted as JSON, that represents an array of content objects:
-
-```json
-{
-  "id": 5,
-  "content": [{
-      "color": "#FFFFFF",
-      "text": "print"
-  },
-  {
-      "color": "#FFFFDD",
-      "text": "(\""
-  },
-  {
-      "color": "#FFFFFF",
-      "text": "(Hello world!"
-  },
-  {
-      "color": "#FFFFDD",
-      "text": "\")"
-  }],
-  "input": {
-    "startIndex": 0,
-    "endIndex": 5
-  }
-}
-```
-
-Each object in the content array represents a text snippet, each of which can have a different color. If the `input` object exists, it represents the range where the user needs to type in the expected input. In this example, the user has to input "print" in order to proceed to the next lesson. If there's an input interaction in the lesson and the user hasn't typed in the input field yet, disable the button. As soon as the user has typed anything, enable the button to allow the user to check for the correct answer and go on to the next lesson or display a message if it is incorrect. If there's no input interaction, keep the button enabled.
-
-Here's an example of how the lesson above could look like:
-
-<img width="894" alt="screenshot 2018-05-15 07 44 38" src="https://user-images.githubusercontent.com/815520/40041124-3db40568-581d-11e8-8327-f939fea207d9.png">
-
-
-### Lesson completion event
-
-A lesson completion event object is created when a lesson has been completed
-
-It contains the following properties:
-- The ID of the lesson
-- A timestamp when the lesson started
-- A timestamp when the lesson completed
+- Come up with a fitting data structure you serve via an API
 
 ## Server API
 
-The server API for getting the lessons is simple. Just run a GET request on https://file-bzxjxfhcyh.now.sh/, which returns a JSON object containing all of the lesson information.
+You must build your own lightweight API to serve the lessons. We suggest the following endpoint structure, but you can adapt it as needed:
 
+```
+GET /lessons          → Returns a list of all lesson IDs and metadata
+GET /lessons/:id      → Returns the full content for a specific lesson
+```
 
+You can implement this API using any technology you prefer: a static JSON server, a tiny Express app, Next.js API routes, or anything else. The API should be runnable locally with clear instructions in your README.
+
+## Submission
+
+Please include the following in your submission:
+
+1. A link to your private GitHub repository.
+2. Your **OpenCode session link** so we can review how you collaborated with AI during the challenge.
+3. A README with instructions on how to run both the app and the API locally, plus a short note on any trade-offs you made and what you would work on next.
+
+Once you are done, please share everything with us via apply@mimo.recruitee.com.
