@@ -10,16 +10,14 @@ The objective of this take-home assignment is to create a simplified version of 
 
 Fingers crossed!
 
-
-
 ## Important
 
-- **User Experience (UX):** How does the app feel to use? Think beyond the happy path and design an experience that feels intuitive and easy to follow for new learners. 
+- **User Experience (UX):** How does the app feel to use? Think beyond the happy path and design an experience that feels intuitive and easy to follow for new learners.
 - **The learning content** Invest time into the learning content. Your job is to create a great experience for the user.
 - **Code Structure and Architecture:** How do you manage state? How is your code organized? We look for clean separation of concerns, maintainability, and thoughtful architectural decisions.
-- **LLM Collaboration:** You must use **OpenCode** while working on this challenge. You don't need to use it exclusively but we want to see how you work with AI — please share your OpenCode session link (or multiple) with your submission. We are interested in your prompts, iterations, and how you leverage LLMs in your workflow.
+- **LLM Collaboration:** You must use [**OpenCode**](https://opencode.ai/) while working on this challenge. You don't need to use it exclusively but we want to see how you work with AI — please [share](https://opencode.ai/docs/share/) your OpenCode session link (or multiple) with your submission. We are interested in your prompts, iterations, and how you leverage LLMs in your workflow.
 - **openrouter api key:** We will provide an openrouter api key which you can use with opencode.
-- **dont invest more than 5hours:** Rather use the readme to describe what you would work on next. We do want to protect your time.
+- **Don't invest more than 8h:** The scope is ambitions, so focus on the topics that feel most important to you. If you need to make trade-offs or cut scope, that is absolutely fine! Use the readme to share your thinking and what you would work on next. We do want to protect your time.
 
 ## What We Value
 
